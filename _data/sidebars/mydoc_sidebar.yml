@@ -1,0 +1,118 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+  - title: sidebar
+    product: AirGateway NDC APIs Development Guide
+    version: 1.0
+    folders:
+      - title:
+        output: pdf
+        type: frontmatter
+        folderitems:
+          - title:
+            url: /titlepage.html
+            output: pdf
+            type: frontmatter
+          - title:
+            url: /tocpage.html
+            output: pdf
+            type: frontmatter
+
+      - title: Getting Started
+        output: web, pdf
+        folderitems:
+          - title: Getting Started
+            url: /mydoc_getting_started.html
+            output: web, pdf
+            type: homepage
+
+          - title: Introduction
+            url: /mydoc_introduction.html
+            output: web, pdf
+
+          - title: Authentication
+            url: /mydoc_authentication.html
+            output: web, pdf
+
+          - title: Multi-provider Request
+            url: /mydoc_multi_provider_requests.html
+            output: web, pdf
+
+          - title: Sending Requests
+            url: /mydoc_sending_requests.html
+            output: web, pdf
+
+      - title: Hub API Docs
+        output: web, pdf
+        folderitems:
+          - title: Hub API Docs
+            url: /mydoc_Hub_API_Docs.html
+            output: web, pdf
+            type: homepage
+
+          - title: Agents
+            url: /mydoc_agents.html
+            output: web, pdf
+
+          - title: Agencies
+            url: /mydoc_agencies.html
+            output: web, pdf
+
+          - title: Consumers
+            url: /mydoc_consumers.html
+            output: web, pdf
+
+          - title: Keys
+            url: /mydoc_keys.html
+            output: web, pdf
+
+      - title: NDC APIs Docs
+        output: web, pdf
+        folderitems:
+          - title: NDC APIs Docs
+            url: /mydoc_NDC_API_Docs.html
+            output: web, pdf
+            type: homepage
+
+      - title: Providers
+        output: web, pdf
+        folderitems:
+          - title: Providers
+            url: /mydoc_providers.html
+            output: web, pdf
+            type: homepage
+
+      - title: Webhooks
+        output: web, pdf
+        folderitems:
+          - title: Webhooks
+            url: /mydoc_webhooks.html
+            output: web, pdf
+            type: homepage
+
+          - title: Keys
+            url: /mydoc_keys.html
+            output: web, pdf
+
+          - title: Keys
+            url: /mydoc_keys.html
+            output: web, pdf
+
+      - title: Workflows
+        url: /mydoc_workflows.html
+        output: web, pdf
+        type: homepage
+        folderitems:
+          - title: Workflows
+            url: /mydoc_workflows.html
+            output: web, pdf
+            type: homepage
+
+          - title: Booking
+            url: /mydoc_booking.html
+            output: web, pdf
+
+          - title: Servicing
+            url: /mydoc_servicing.html
+            output: web, pdf
+

@@ -1,0 +1,128 @@
+//   In this file I will override the values and parameters inherited from the template I'm
+// following to build the sidebar.
+body {
+    display: block;
+    margin: 0px;
+}
+
+.container {
+  padding-right: unset !important ;
+  padding-left: unset !important ;
+  margin-right: unset !important ;
+  margin-left: unset !important ;
+  margin-top: unset !important ;
+  height: 100%;
+
+  #main {
+    width: 100vw;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 20vw 80vw; 
+    margin-right: 0px; 
+     margin-left: 0px;   
+  }
+
+     .logo-sidebar{
+    width: 300px;
+    position: absolute;
+    top: 20px;
+    left: 50px;  
+    }
+
+    form {
+    position: absolute;
+    top: 85px;
+    left: 45px;
+    height: 60px;
+    }
+}  
+
+
+#search-input {
+    padding: .5em;
+    margin-left: 20px;
+    width: 20em;
+    font-size: 0.8em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+#tg-sb-sidebar {
+      background: $color-primary;
+    grid-column-start: 1;
+    color: #fff;
+    display: block;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    padding-right: unset;
+    padding-left: unset;
+    padding-top: 3rem;
+    position: fixed;
+    height: 100vh;
+    max-width: 20vw;
+    min-width: 20vw;  
+    
+ 
+
+
+    #mysidebar {
+    margin-top: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3rem;
+    position: absolute;
+    top: 155px;
+    max-width: 19vw !important;
+    min-width: 19vw !important;
+
+    .sidebarTitle {
+          border: unset;
+          margin-top: 20px;
+          font-weight: 900;
+          font-size: 2.8rem;
+          letter-spacing: 0.4rem;
+          color: white;
+          margin-bottom: 10px;
+          margin-left: 5px;
+          text-align: center;
+        }
+
+
+      }
+    }
+
+    #tg-sb-content {
+      grid-column-start: 2;
+     max-width: 80vw;
+     min-width: 80vw;
+      margin: auto;
+      padding: 5rem;
+    }
+
+.nav > li {
+  margin: 1rem 0;
+  border-bottom: 0.0001px solid #ffffff3b;
+}
+
+.nav ul li a {
+  background-color: unset !important;
+  border-top: 0.5px solid $color-primary-light;
+  padding-left: 3rem !important;
+  font-weight: 100;
+  font-size: 18px;
+}
+
+.nav li a {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  line-height: 5rem;
+  padding: 2px 10px;
+  padding-top: 1rem;
+  background-color: unset !important;
+}
