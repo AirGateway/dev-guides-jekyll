@@ -2,7 +2,12 @@
 <html>
   <head>
     {% include head.html %}
+ <script>
+
+ 
+    </script>
     <script>
+   
       $(document).ready(function () {
         // Initialize navgoco with default options
         $("#mysidebar").navgoco({
@@ -86,10 +91,16 @@
         <!-- Content Row -->
 
         <div class="row">
-
           <!-- Sidebar Column -->
           <div class="col-md-3" id="tg-sb-sidebar">
-            <img class="logo-sidebar" src="{{ site.baseurl }}/images/AirGateway-10.png"  >
+            <div class="logo-container">
+              <a href="{{ site.baseurl }}">
+                <img class="logo" src="{{ site.baseurl }}/images/favicon.png" />
+                <div class="logo-sidebar" id="test"></div>
+              </a>
+            </div>
+
+            <!--  <img class="logo-sidebar" src="{{ site.baseurl }}/images/AirGateway-10.png"  > -->
             <form action="{{ site.baseurl }}/search/" method="get">
               <input
                 type="text"
@@ -98,12 +109,38 @@
                 placeholder="Search"
                 autofocus
               />
-           
 
               <input type="submit" value="Search" style="display: none" />
-            </form> 
-            
+            </form>
+
             {% include sidebar.html %}
+
+            <div id="shortcuts">
+              <h3 class="shortcuts_links" >Links</h3>
+              <ul>
+                <li>
+                  <a class="padding" href="https://agency.airgateway.net"
+                    ><i class="fa fa-keyboard-o"></i> Agency Portal</a
+                  >
+                </li>
+
+                <li>
+                  <a class="padding" href="https://docs.airgateway.net/"
+                    ><i class="fa fa-bookmark"></i> Postman Samples</a
+                  >
+                </li>
+
+                <li>
+                  <a class="padding" href="https://gitter.im/AirGateway/Lobby"
+                    ><i class="fa fa-comments-o"></i> Gitter Support Chat</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div id="footer">
+              <p>Made with <a href="https://jekyllrb.com//">Jekyll.</a></p>
+            </div>
           </div>
 
           <!-- Content Column -->
