@@ -1,5 +1,5 @@
 ---
-title: NDC APIs Docs
+title: NDC API Docs
 sidebar: mydoc_sidebar
 permalink: mydoc_NDC_API_Docs.html
 folder: mydoc

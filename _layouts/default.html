@@ -2,12 +2,8 @@
 <html>
   <head>
     {% include head.html %}
- <script>
-
- 
-    </script>
+    <script></script>
     <script>
-   
       $(document).ready(function () {
         // Initialize navgoco with default options
         $("#mysidebar").navgoco({
@@ -95,19 +91,28 @@
           <div class="col-md-3" id="tg-sb-sidebar">
             <div class="logo-container">
               <a href="/">
-            
                 <div class="logo-sidebar" id="test"></div>
               </a>
-         
             </div>
 
+            <form action="{{ site.baseurl }}/search/" method="get">
+              <input
+                type="text"
+                name="q"
+                id="search-input"
+                placeholder="Search"
+                autofocus
+              />
+
+              <input type="submit" value="Search" style="display: none" />
+            </form>
+
             <!--  <img class="logo-sidebar" src="{{ site.baseurl }}/images/AirGateway-10.png"  > -->
-       
 
             {% include sidebar.html %}
 
             <div id="shortcuts">
-              <h3 class="shortcuts_links" >Links</h3>
+              <h3 class="shortcuts_links">Links</h3>
               <ul>
                 <li>
                   <a class="padding" href="https://agency.airgateway.net"
@@ -128,18 +133,6 @@
                 </li>
               </ul>
             </div>
-
-                 <form action="{{ site.baseurl }}/search/" method="get">
-              <input
-                type="text"
-                name="q"
-                id="search-input"
-                placeholder="Search"
-                autofocus
-              />
-
-              <input type="submit" value="Search" style="display: none" />
-            </form>
 
             <div id="footer">
               <p>Made with <a href="https://jekyllrb.com//">Jekyll.</a></p>
