@@ -1,12 +1,17 @@
-repository: tomjoht/documentation-theme-jekyll
+repository: https://hopeful-khorana-86f199.netlify.app/
 
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: AirGateway NDC APIs Development Guide
+title: AirGateway 
 # this appears on the top navigation bar next to the home button
 
-site_title: Jekyll theme for documentation
+description: myCustomAndDetailedDescription
+
+topnav_title: AirGateway NDC API Development Guide
+# this appears on the top navigation bar next to the home button
+
+site_title: NDC API Development Guide
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: Your company
@@ -33,9 +38,9 @@ exclude:
   - vendor
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_subject_line: Jekyll documentation theme
+feedback_subject_line: AirGateway NDC API Development Guide
 
-feedback_email: tomjoht@gmail.com
+feedback_email: 
 # used as a contact email for the Feedback link in the top navigation bar
 
 # feedback_disable: true
@@ -80,7 +85,7 @@ defaults:
 sidebars:
   - home_sidebar
 
-description: "Intended as a documentation theme based on Jekyll for technical writers documenting software and other technical products, this theme has all the elements you would need to handle multiple products with both multi-level sidebar navigation, tags, and other documentation features."
+description: "."
 # the description is used in the feed.xml file
 
 # needed for sitemap.xml file only
@@ -91,4 +96,7 @@ github: [metadata]
 
 sass:
   sass_dir: assets/css
-  style: compact # possible values: nested expanded compact compressed
+  style: compact # possible values: nested expanded compact compresse
+
+plugins:
+  - jemoji

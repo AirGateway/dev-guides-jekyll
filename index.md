@@ -1,6 +1,6 @@
 ---
-title: "AirGateway NDC APIs Development Guide"
-keywords: AirGateway NDC APIs Development Guide
+title: "AirGateway NDC API Development Guide"
+keywords: AirGateway NDC API Development Guide
 tags: [getting_started]
 sidebar: mydoc_sidebar
 permalink: index.html

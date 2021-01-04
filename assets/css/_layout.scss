@@ -7,6 +7,7 @@ body {
 }
 
 .container {
+  overflow-x: hidden;
   padding-right: unset !important ;
   padding-left: unset !important ;
   margin-right: unset !important ;
@@ -242,7 +243,8 @@ body {
   }
 }
 
-#tg-sb-content {  grid-column-start: 2;
+#tg-sb-content {
+  grid-column-start: 2;
 
   margin-left: 40px;
   padding: 5rem;
@@ -269,10 +271,16 @@ body {
     min-width: 800px;
     max-width: 1000px;
 
+    .emoji {
+      max-width: 32px !important;
+      max-height: 32px !important;
+    }
+
     table {
       min-width: unset;
       max-width: unset;
-      min-width: max-content;
+      width: 100%;
+      overflow-x: inherit;
     }
   }
 
