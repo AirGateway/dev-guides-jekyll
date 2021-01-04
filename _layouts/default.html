@@ -95,24 +95,14 @@
           <div class="col-md-3" id="tg-sb-sidebar">
             <div class="logo-container">
               <a href="/">
-                <img class="logo" src="{{ site.baseurl }}/images/favicon.png" />
+            
                 <div class="logo-sidebar" id="test"></div>
               </a>
-              <h6>NDC JSON API Developer Guide </h6>
+         
             </div>
 
             <!--  <img class="logo-sidebar" src="{{ site.baseurl }}/images/AirGateway-10.png"  > -->
-            <form action="{{ site.baseurl }}/search/" method="get">
-              <input
-                type="text"
-                name="q"
-                id="search-input"
-                placeholder="Search"
-                autofocus
-              />
-
-              <input type="submit" value="Search" style="display: none" />
-            </form>
+       
 
             {% include sidebar.html %}
 
@@ -138,6 +128,18 @@
                 </li>
               </ul>
             </div>
+
+                 <form action="{{ site.baseurl }}/search/" method="get">
+              <input
+                type="text"
+                name="q"
+                id="search-input"
+                placeholder="Search"
+                autofocus
+              />
+
+              <input type="submit" value="Search" style="display: none" />
+            </form>
 
             <div id="footer">
               <p>Made with <a href="https://jekyllrb.com//">Jekyll.</a></p>

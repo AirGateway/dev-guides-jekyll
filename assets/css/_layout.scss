@@ -20,23 +20,7 @@ body {
     width: 100vw;
   }
 
-  .load{
-   &:after{
-    content: "";
-    //background-color: black;
-    background-color: linear-gradient(-45deg, $color-tertiary-light, $color-tertiary-dark);
-   // background-image: url(../../images/sprite.png);    
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-  //	background: linear-gradient(-45deg, $color-primary, $color-primary-light, $color-secondary, $color-primary-light);
-    background-size: 400% 400%;
-    visibility: hidden;
-	  animation: gradient 15s ease ;
 
-  }
-}
 
   .row {
     display: grid;
@@ -51,28 +35,25 @@ body {
     background-repeat: no-repeat;
     width: 230px;
     height: 40px;
-    transform: translateX(10px);
+    transform: unset;
     opacity: 1;
-    //animation: from-top 4s ease-in-out;
+
   }
 
   .logo-container {
     align-self: center;
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto ;
+
     grid-row-start: 1;
     &:hover {
       .logo {
         transform: translateX(0rem) scale(1);
-        animation: flip 2s ease-in-out;
+     
       }
     }
 
     a {
       display: grid;
-      grid-row-start: 1;
-      grid-template-columns: 40px 260px;
       width: 270px;
       margin-left: auto;
       margin-right: auto;
@@ -100,14 +81,14 @@ body {
   }
 
   form {
-    grid-row-start: 2;
+    grid-row-start: 4;
     transform: scale(1) rotate(0deg);
     max-width: 200px !important;
     min-width: 200px !important;
     margin-left: auto;
     margin-right: auto;
     padding: 0px;
-    //animation: appear 4s ease-in-out;
+
 
     #search-input {
       padding: 0px !important;
@@ -141,7 +122,7 @@ body {
 #tg-sb-sidebar {
  // background: $color-primary;
   grid-column-start: 1;
-  grid-template-rows: 60px 60px auto auto 50px;
+  grid-template-rows: 60px auto auto auto auto;
   color: #fff;
   display: grid;
   -webkit-transition: all 0.3s;
@@ -154,25 +135,9 @@ body {
   min-height: 100vh;
   max-width: 300px;
   min-width: 300px;
-  background: linear-gradient(-45deg, $color-primary, $color-primary-light, $color-primary, $color-primary-light);
-  background-size: 400% 100%;
+  background: $color-primary;
+   background-size: 400% 100%;
   background-position: 0% 100%;
-  animation: gradient 25s ease infinite;
-  
-  @keyframes gradient {
-	0% {
-      visibility: visible;
-		background-position: 0% 100%;
-	}
-	50% {
-      visibility: visible;
-		background-position: 100% 0%;
-	}
-	100% {
-      visibility: visible;
-		background-position: 0% 100%;
-	}
-}
 
   #mysidebar {
     margin-top: 0%;
@@ -181,6 +146,7 @@ body {
     position: relative;
     max-width: 270px !important;
     min-width: 270px !important;
+      grid-row-start: 2;
 
     .sidebarTitle {
       border: unset;
@@ -197,37 +163,37 @@ body {
     li:nth-child(1) {
       transform: translateX(0rem);
       opacity: 1;
-      animation: from-left 0.5s ease-in-out;
+    
     }
 
     li:nth-child(2) {
       transform: translateX(0rem);
       opacity: 1;
-      animation: from-left 1s ease-in-out;
+    
     }
 
     li:nth-child(3) {
       transform: translateX(0rem);
       opacity: 1;
-      animation: from-left 1.5s ease-in-out;
+   
     }
 
     li:nth-child(4) {
       transform: translateX(0rem);
       opacity: 1;
-      animation: from-left 2s ease-in-out;
+     
     }
 
     li:nth-child(5) {
       transform: translateX(0rem);
       opacity: 1;
-      animation: from-left 2.5s ease-in-out;
+     
     }
 
     li:nth-child(6) {
       transform: translateX(0rem);
       opacity: 1;
-      animation: from-left 3s ease-in-out;
+   
     }
   }
 
@@ -235,14 +201,13 @@ body {
     align-self: end;
     display: block;
     height: 200px;
-    grid-row-start: 4;
+    grid-row-start: 3;
     margin-top: 0%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     max-width: 270px !important;
     min-width: 270px !important;
-    animation: from-left 3s ease-in-out;
 
     .icon-arrow-up {
       display: none !important;
@@ -253,6 +218,10 @@ body {
       color: white !important;
       margin: 0 !important;
       padding: 2px 10px !important;
+
+      .anchorjs-link  {
+        display: none;
+      }
     }
 
     ul {
@@ -283,7 +252,6 @@ body {
       font-size: 16px;
       font-weight: 700;
       transform: scale(1) rotate(0deg);
-      animation: appear 3s ease-in-out 6s;
     }
   }
 }
@@ -306,6 +274,10 @@ body {
       font-size: 54px;
       letter-spacing: 5px;
     } 
+  }
+
+  .post-content {
+    max-width: max-content;
   }
 
   #breadcrumbs {
@@ -341,51 +313,7 @@ body {
   background-color: unset !important;
 }
 
-@keyframes from-left {
-  0% {
-    opacity: 0;
-    transform: translateX(-20rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0rem);
-  }
-}
 
-@keyframes from-top {
-  0% {
-    opacity: 0;
-    transform: translateY(-20rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0rem);
-  }
-}
-
-@keyframes appear {
-  0% {
-    transform: scale(1) rotate(0deg);
-  }
-  54% {
-    transform: scale(1.2) rotate(5deg);
-  }
-
-  100% {
-    transform: scale(1) rotate(0deg);
-  }
-}
-@keyframes flip {
-  0% {
-    transform: rotateX(0deg);
-  }
-  50% {
-    transform: rotateX(180deg) scale(1.2);
-  }
-  100% {
-    transform: rotateX(0deg);
-  }
-}
 
 
 
