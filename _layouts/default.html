@@ -78,20 +78,32 @@
         });
       });
     </script>
-    {% endif %}
+
+  {% endif %}
   </head>
   <body>
     <!-- Page Content -->
     <div class="container">
       <div id="main">
         <!-- Content Row -->
+        <!--
+<a id="togglemenu" onclick="document.body.classList.toggle('menuopen');">Menu<span><span></span><span></span><span></span></span></a>-->
+        <a
+          id="togglemenu"
+          class="lines"
+          onclick="document.getElementById('tg-sb-sidebar').classList.toggle('hideSidebar');
+          document.getElementById('togglemenu').classList.toggle('open');"
+          >
+          <span><span></span><span></span><span></span></span
+        ></a>
 
         <div class="row">
           <!-- Sidebar Column -->
-          <div class="col-md-3" id="tg-sb-sidebar">
+          <div class="col-md-3 hideSidebar" id="tg-sb-sidebar">
             <div class="logo-container">
-              <a href="/">
-                <div class="logo-sidebar" id="test"></div>
+              <a href="/" >
+                <!--<div class="logo-sidebar" id="test"></div>-->
+                <h1 class="logo"> AirGateway </h1>
               </a>
             </div>
 

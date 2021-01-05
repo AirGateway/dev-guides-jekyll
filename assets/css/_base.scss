@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'TruenoExBd';
+    src: url(../fonts/TruenoExBd.otf) format("truetype");
+}
+
+.logo {
+  font-family: 'TruenoExBd', Fallback, sans-serif;
+  font-size: 45px;
+  line-height: 1.8;
+  font-weight: bolder;  
+  color: #fafafa;
+}
+
 .body {
   font-family: "Poppins", Arial, sans-serif;
   font-size: 16px;
@@ -6,6 +19,7 @@
   background: #fafafa;
   color: gray;
 }
+
 
 $color_primary: #c00005;
 $color-primary-light: #f24b51;
