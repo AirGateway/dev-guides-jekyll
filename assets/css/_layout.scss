@@ -267,6 +267,13 @@ body {
     max-width: 1000px;
   }
 
+     table {
+      min-width: 800px;
+      max-width: 100% !important;
+      width: 100% !important;
+      overflow-x: inherit;
+    }
+
   .post-content > * {
     min-width: 800px;
     max-width: 1000px;
@@ -277,8 +284,8 @@ body {
     }
 
     table {
-      min-width: unset;
-      max-width: unset;
+      min-width: 800px;
+      max-width: 100% ;
       width: 100%;
       overflow-x: inherit;
     }
