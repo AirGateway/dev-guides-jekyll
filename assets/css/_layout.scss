@@ -278,6 +278,14 @@ body {
     min-width: 85%;
     max-width: 85%;
 
+    h1 {
+      font-size: 30px;
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+
     .emoji {
       max-width: 32px !important;
       max-height: 32px !important;
@@ -288,6 +296,16 @@ body {
       max-width: 100%;
       width: 100%;
       overflow-x: inherit;
+    }
+  }
+
+  .post-content {
+    h1 {
+      font-size: 30px !important;
+    }
+
+    h2 {
+      font-size: 28px !important;
     }
   }
 
@@ -321,194 +339,21 @@ body {
   padding-top: 1rem;
   background-color: unset !important;
 }
-/*
-#togglemenu {
-  display: none;
-  cursor: pointer;
-}
-@media (max-width: 1000px) {
-  #togglemenu {
-    display: block;
-  }
-  #menu ul {
-    display: none;
-  }
-  .menuopen #menu ul {
-    display: block;
-  }
-}
-
-@keyframes span1 {
-  0% {
-    top: 0%;
-    transform-origin: 50% 50%;
-  }
-  50% {
-    top: 50%;
-    transform: rotate(0deg) translateY(-50%);
-  }
-  100% {
-    top: 50%;
-    transform: rotate(45deg) translateY(-50%);
-  }
-}
-@keyframes span2 {
-  0% {
-    opacity: 1;
-  }
-  45% {
-    opacity: 1;
-  }
-  65% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes span3 {
-  0% {
-    bottom: 0%;
-    transform-origin: 50% 50%;
-  }
-  45% {
-    bottom: 50%;
-    transform: rotate(0deg) translateY(50%);
-  }
-  100% {
-    bottom: 50%;
-    transform: rotate(-45deg) translateY(50%);
-  }
-}
-
-@media only screen and (max-width: 55rem) {
-  #menu {
-    display: none;
-  }
-  .menuopen #menu {
-    display: block;
-  }
-  #togglemenu {
-    display: block;
-    cursor: pointer;
-  }
-}
-#togglemenu > span {
-  display: inline-block;
-  margin-left: 0.4rem;
-  width: 1.1rem;
-  height: 0.75rem;
-  position: relative;
-  vertical-align: middle;
-  position: relative;
-  bottom: 1px;
-}
-#togglemenu > span > span {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: #999;
-}
-#togglemenu > span > span:nth-child(1) {
-  top: 0;
-  transform-origin: 50% 0%;
-}
-#togglemenu > span > span:nth-child(2) {
-  top: 50%;
-  margin-top: -1px;
-}
-#togglemenu > span > span:nth-child(3) {
-  bottom: 0;
-  transform-origin: 50% 100%;
-}
-
-#togglemenu > span > span:nth-child(1) {
-  animation: span1 0.25s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-#togglemenu > span > span:nth-child(2) {
-  animation: span2 0.25s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-#togglemenu > span > span:nth-child(3) {
-  animation: span3 0.25s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-#togglemenu {
-  display: block;
-  position: fixed;
-  top: 1vh;
-  right: 10%;
-  cursor: pointer;
-  z-index: 2;
-
-  span {
-    display: inline-block;
-    margin-left: 0.4rem;
-    width: 20px;
-    height: 15px;
-    position: relative;
-    vertical-align: middle;
-    position: relative;
-    bottom: 1px;
-    span {
-      width: 33px;
-      height: 4px;
-      background: #000;
-      border-radius: 10px;
-    }
-    &:nth-child(1) {
-      top: 0;
-    }
-    &:nth-child(2) {
-      top: 50%;
-    }
-    &:nth-child(3) {
-      top: 100%;
-    }
-  }
- 
-}
- */
 
 //      Ipad Styles Starts Here
 @media (max-width: 1200px) and (min-width: 768px) {
   .container .logo-container a {
     display: grid;
-    width: 40%;
+    width: 280px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
   }
 
-  #tg-sb-sidebar {
-    grid-column-start: 1;
-    grid-template-rows: 80px 60px auto 150px auto;
-    color: #fff;
-    display: grid;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    padding-right: unset;
-    padding-left: unset;
-    padding-top: 5%;
-    position: fixed;
-    min-height: 100vh;
-    max-width: 300px;
-    min-width: 300px;
-    background: #cd0000;
-    background-size: 400% 100%;
-    background-position: 0% 100%;
-  }
 }
 
 //      Mobile Styles Starts Here
-@media (max-width: 768px) and (min-width: 340px) {
+@media (max-width: 1200px) and (min-width: 340px) {
   .container .row {
     display: grid;
     grid-template-columns: auto auto;
@@ -519,6 +364,7 @@ body {
       min-width: 100vw;
       grid-column-start: 1;
       transform: translateX(-100vw);
+      padding-top: 5%;
 
       .nav li a {
         font-size: 16px;
@@ -645,6 +491,10 @@ body {
         display: block;
       }
 
+      table {
+        text-align: center;
+      }
+
       /* Hide table headers (but not display: none;, for accessibility) */
       thead tr {
         position: relative;
@@ -691,8 +541,8 @@ body {
   height: 45px;
   position: fixed;
   position: fixed;
-  right: 4%;
-  top: 6%;
+  right: 2%;
+  top: 3%;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -709,7 +559,7 @@ body {
   display: block;
   position: absolute;
   height: 3px;
-  width: 100%;
+  width: 30px;
   background: white;
   border-radius: 9px;
   opacity: 1;
