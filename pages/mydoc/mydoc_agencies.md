@@ -1,7 +1,7 @@
 ---
 title: Agencies
 sidebar: mydoc_sidebar
-permalink: mydoc_agencies.html
+permalink: agencies.html
 folder: mydoc
 ---
 

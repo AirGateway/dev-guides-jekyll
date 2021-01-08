@@ -1,7 +1,7 @@
 ---
 title: Providers List
 sidebar: mydoc_sidebar
-permalink: mydoc_providers.html
+permalink: providers.html
 folder: mydoc
 ---
 

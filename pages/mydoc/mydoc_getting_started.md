@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 sidebar: mydoc_sidebar
-permalink: mydoc_getting_started.html
+permalink: getting_started.html
 folder: mydoc
 ---
 

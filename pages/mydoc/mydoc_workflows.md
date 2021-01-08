@@ -1,7 +1,7 @@
 ---
 title: Workflows
 sidebar: mydoc_sidebar
-permalink: mydoc_workflows.html
+permalink: workflows.html
 folder: mydoc
 ---
 
@@ -13,8 +13,8 @@ Using our NDC JSON API, you can book and issue tickets, and adding ancillaries t
 
 You can find our basic workflows here:
 
-- [Booking](https://dev-guides.airgateway.net/workflows/booking/)
-- [Servicing](https://dev-guides.airgateway.net/workflows/servicing/)
+- [Booking]({{  page.url | remove:'/workflows.html' | split: '/'  }}/booking.html/)
+- [Servicing]({{  page.url | remove:'/workflows.html' | split: '/'  }}/servicing.html/)
 
 ---
 

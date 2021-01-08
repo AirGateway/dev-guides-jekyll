@@ -1,7 +1,7 @@
 ---
 title: Multi-provider requests
 sidebar: mydoc_sidebar
-permalink: mydoc_multi_provider_requests.html
+permalink: multi_provider_requests.html
 folder: mydoc
 ---
 

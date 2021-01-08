@@ -100,3 +100,6 @@ sass:
 
 plugins:
   - jemoji
+
+#emoji:
+#  src: "/assets/images/emoji"

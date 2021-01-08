@@ -1,7 +1,7 @@
 ---
 title: Authentication
 sidebar: mydoc_sidebar
-permalink: mydoc_authentication.html
+permalink: authentication.html
 folder: mydoc
 ---
 

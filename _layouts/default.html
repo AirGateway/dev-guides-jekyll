@@ -2,7 +2,7 @@
 <html>
   <head>
     {% include head.html %}
-    <script></script>
+
     <script>
       $(document).ready(function () {
         // Initialize navgoco with default options
@@ -79,31 +79,21 @@
       });
     </script>
 
-  {% endif %}
+    {% endif %}
   </head>
   <body>
     <!-- Page Content -->
     <div class="container">
       <div id="main">
-        <!-- Content Row -->
-        <!--
-<a id="togglemenu" onclick="document.body.classList.toggle('menuopen');">Menu<span><span></span><span></span><span></span></span></a>-->
-        <a
-          id="togglemenu"
-          class="lines"
-          onclick="document.getElementById('tg-sb-sidebar').classList.toggle('hideSidebar');
-          document.getElementById('togglemenu').classList.toggle('open');"
-          >
-          <span><span></span><span></span><span></span></span
-        ></a>
+        <!-- Content Row  -->
 
         <div class="row">
           <!-- Sidebar Column -->
           <div class="col-md-3 hideSidebar" id="tg-sb-sidebar">
             <div class="logo-container">
-              <a href="/" >
+              <a href="/">
                 <!--<div class="logo-sidebar" id="test"></div>-->
-                <h1 class="logo"> AirGateway </h1>
+                <h1 class="logo">AirGateway</h1>
               </a>
             </div>
 
@@ -151,8 +141,21 @@
             </div>
           </div>
 
-          <!-- Content Column -->
-          <div class="{{content_col_size}}" id="tg-sb-content">{{content}}</div>
+          <!-- Content Column 
+    
+          -->
+          <div class="{{content_col_size}}" id="tg-sb-content">
+            <a
+              id="togglemenu"
+              class=""
+              onclick="document.getElementById('tg-sb-sidebar').classList.toggle('hideSidebar');
+          document.getElementById('togglemenu').classList.toggle('visible');"
+            >
+              <span><span></span><span></span><span></span></span
+            ></a>
+
+            {{content}}
+          </div>
           <!-- /.row -->
         </div>
         <!-- /.container -->

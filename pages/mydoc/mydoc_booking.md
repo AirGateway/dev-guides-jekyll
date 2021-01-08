@@ -1,7 +1,7 @@
 ---
 title: Booking
 sidebar: mydoc_sidebar
-permalink: mydoc_booking.html
+permalink: booking.html
 folder: mydoc
 ---
 

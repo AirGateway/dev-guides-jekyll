@@ -1,7 +1,7 @@
 ---
 title: Servicing
 sidebar: mydoc_sidebar
-permalink: mydoc_servicing.html
+permalink: servicing.html
 folder: mydoc
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Webhooks
 sidebar: mydoc_sidebar
-permalink: mydoc_webhooks.html
+permalink: webhooks.html
 folder: mydoc
 ---
 

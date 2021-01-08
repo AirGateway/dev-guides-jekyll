@@ -1,7 +1,7 @@
 ---
 title: Consumers
 sidebar: mydoc_sidebar
-permalink: mydoc_consumers.html
+permalink: consumers.html
 folder: mydoc
 ---
 

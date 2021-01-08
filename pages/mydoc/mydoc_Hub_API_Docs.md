@@ -1,7 +1,7 @@
 ---
 title: Hub API Docs
 sidebar: mydoc_sidebar
-permalink: mydoc_Hub_API_Docs.html
+permalink: Hub_API_Docs.html
 folder: mydoc
 ---
 

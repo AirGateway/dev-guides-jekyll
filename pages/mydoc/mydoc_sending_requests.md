@@ -1,7 +1,7 @@
 ---
 title: Sending Requests
 sidebar: mydoc_sidebar
-permalink: mydoc_sending_requests.html
+permalink: sending_requests.html
 folder: mydoc
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Agents
 sidebar: mydoc_sidebar
-permalink: mydoc_agents.html
+permalink: agents.html
 folder: mydoc
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Keys
 sidebar: mydoc_sidebar
-permalink: mydoc_keys.html
+permalink: keys.html
 folder: mydoc
 ---
 

@@ -26,14 +26,8 @@ body {
     margin-left: 0px;
   }
 
-  #test {
-    background-image: url(../../images/AirGateway-11.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 230px;
-    height: 40px;
-    transform: unset;
-    opacity: 1;
+  .test {
+    background-color: black;
   }
 
   .logo-container {
@@ -48,6 +42,8 @@ body {
     }
 
     a {
+      color: unset !important;
+      text-decoration: none !important;
       display: grid;
       width: 270px;
       margin-left: auto;
@@ -99,7 +95,7 @@ body {
       max-height: 40px !important;
       background: #fff;
       color: #000;
-      font-size: 19px;
+      font-size: 18px;
       border-radius: 4px;
       -webkit-box-shadow: none !important;
       box-shadow: none !important;
@@ -113,6 +109,10 @@ body {
       outline: none;
     }
   }
+}
+
+#togglemenu {
+  visibility: hidden;
 }
 
 #tg-sb-sidebar {
@@ -202,7 +202,7 @@ body {
       display: none !important;
     }
     .shortcuts_links {
-      font-size: 22px !important;
+      font-size: 18px !important;
       font-weight: 700 !important;
       color: white !important;
       margin: 0 !important;
@@ -241,6 +241,10 @@ body {
       font-size: 16px;
       font-weight: 700;
       transform: scale(1) rotate(0deg);
+
+      a {
+        color: #ffeb3b;
+      }
     }
   }
 }
@@ -289,6 +293,8 @@ body {
     .emoji {
       max-width: 32px !important;
       max-height: 32px !important;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
     }
 
     table {
@@ -327,11 +333,11 @@ body {
   border-top: 0.5px solid $color-primary-light;
   padding-left: 3rem !important;
   font-weight: 100;
-  font-size: 18px;
+  font-size: 16x;
 }
 
 .nav li a {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 700;
   color: white;
   line-height: 5rem;
@@ -350,10 +356,45 @@ body {
     position: relative;
   }
 
+  .hideSidebar {
+    transform: translateX(100vw) !important  ;
+    z-index: 1;
+  }
+
+  .visible {
+    visibility: hidden !important;
+  }
 }
 
 //      Mobile Styles Starts Here
-@media (max-width: 1200px) and (min-width: 340px) {
+@media (max-width: 1200px) and (min-width: 300px) {
+  .hideSidebar {
+    transform: translateX(100vw) !important  ;
+    z-index: 1;
+  }
+
+  #togglemenu {
+    width: 30px;
+    height: 45px;
+    position: absolute;
+    right: 2%;
+    top: 3%;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    visibility: visible;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .visible {
+    visibility: hidden !important;
+  }
   .container .row {
     display: grid;
     grid-template-columns: auto auto;
@@ -363,11 +404,12 @@ body {
     #tg-sb-sidebar {
       min-width: 100vw;
       grid-column-start: 1;
-      transform: translateX(-100vw);
+      transform: translateX(0vw);
       padding-top: 5%;
+      z-index: 4;
 
       .nav li a {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 700;
         color: white;
         line-height: 30px;
@@ -379,7 +421,7 @@ body {
       #shortcuts {
         height: 125px !important;
         .shortcuts_links {
-          font-size: 16px !important;
+          font-size: 14px !important;
           font-weight: 700 !important;
           color: white !important;
           margin: 0 !important;
@@ -390,7 +432,7 @@ body {
           li {
             a {
               font-weight: 400 !important;
-              font-size: 16px !important;
+              font-size: 14px !important;
               color: white !important;
               line-height: 30px !important;
               padding: 2px 10px !important;
@@ -399,6 +441,10 @@ body {
             }
           }
         }
+      }
+
+      #footer p {
+        font-size: 12px;
       }
     }
 
@@ -526,41 +572,17 @@ body {
       }
     }
   }
-
-  .hideSidebar {
-    transform: translateX(0vw) !important ;
-    z-index: 1;
-  }
 }
 //      Mobile Styles Ends Here
 
 /* Icon 1 */
-
-#togglemenu {
-  width: 30px;
-  height: 45px;
-  position: fixed;
-  position: fixed;
-  right: 2%;
-  top: 3%;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-  cursor: pointer;
-  z-index: 3;
-}
 
 #togglemenu span {
   display: block;
   position: absolute;
   height: 3px;
   width: 30px;
-  background: white;
+  background: black;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -576,17 +598,17 @@ body {
 
 #togglemenu span span:nth-child(1) {
   top: -10px;
-  background-color: white !important;
+  background-color: black !important;
 }
 
 #togglemenu span span:nth-child(2) {
   top: 0px;
-  background-color: white !important;
+  background-color: black !important;
 }
 
 #togglemenu span span:nth-child(3) {
   top: 10px;
-  background-color: white !important;
+  background-color: black !important;
 }
 
 #togglemenu.open span span:nth-child(1) {
@@ -596,12 +618,14 @@ body {
   -o-transform: rotate(135deg);
   transform: rotate(135deg);
   background-color: black !important;
+  display: none;
 }
 
 #togglemenu.open span span:nth-child(2) {
   opacity: 0;
   left: -60px;
   background-color: black !important;
+  display: none;
 }
 
 #togglemenu.open span span:nth-child(3) {
@@ -611,4 +635,5 @@ body {
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
   background-color: black !important;
+  display: none;
 }
