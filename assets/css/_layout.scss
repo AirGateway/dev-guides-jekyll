@@ -262,7 +262,7 @@ body {
 
 #tg-sb-content {
   grid-column-start: 2;
-  padding: 5rem;
+  padding: 6rem 12rem;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-style: initial !important;
@@ -278,19 +278,23 @@ body {
     }
   }
 
+  .post-header {
+    margin-bottom: 6rem;
+  }
+
   .post-title-main {
-    margin-top: 0px !important;
-    margin-bottom: 10px !important;
+    margin-top: 1rem !important;
+    margin-bottom: 2rem !important;
     h1 {
       font-size: 54px;
       letter-spacing: 5px;
     }
   }
 
-  .post-header {
-    min-width: 800px;
-    max-width: 1000px;
-  }
+  //.post-header {
+  //  min-width: 800px;
+  //  max-width: 1000px;
+  //}
 
   table {
     min-width: 800px;
