@@ -87,8 +87,8 @@ entries:
             url: /servicing.html
             output: web, pdf
 
-      - title: Providers
-        url: /providers.html
+      - title: Providers List
+        url: /providers_list.html
         output: web, pdf
         type: homepage
 
