@@ -61,6 +61,11 @@ jQuery(function () {
   });
 
   var buildSearchResult = (doc) => {
+    console.log(doc.url);
+    var docUrl = doc.url;
+    docUrl = docUrl.replace(/-/g, "_");
+    docUrl = docUrl.concat(".html");
+    console.log(docUrl);
     var li = document.createElement("li"),
       article = document.createElement("article"),
       header = document.createElement("header"),
@@ -74,7 +79,7 @@ jQuery(function () {
     //a.href += "/pages/" + doc.url;
     
    
-    a.href = doc.url;
+    a.href = docUrl;
     a.textContent = doc.name;
  console.log(a);
     p1.dataset.field = "content";

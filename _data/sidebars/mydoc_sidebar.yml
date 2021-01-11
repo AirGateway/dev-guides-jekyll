@@ -17,6 +17,10 @@ entries:
             url: /tocpage.html
             output: pdf
             type: frontmatter
+          - title: 
+            url: /search.html
+            output: pdf
+            type: frontmatter 
 
       - title: Getting Started
         url: /getting_started.html
@@ -87,4 +91,6 @@ entries:
         url: /providers.html
         output: web, pdf
         type: homepage
+
+       
         
