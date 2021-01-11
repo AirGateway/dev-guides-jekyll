@@ -31,19 +31,16 @@ body {
   }
 
   .no-arrow {
-    span{
-          display: none;
+    span {
+      display: none;
     }
   }
 
-  .search > *{
-margin: 0%;
-min-width: 60vw !important;
-max-width: 60vw !important;
-
-
- }
-
+  .search > * {
+    margin: 0%;
+    min-width: 60vw !important;
+    max-width: 60vw !important;
+  }
 
   .logo-container {
     align-self: center;
@@ -107,7 +104,7 @@ max-width: 60vw !important;
       height: 40px !important;
       min-height: 40px !important;
       max-height: 40px !important;
-      background: #fff;
+      background: rgb(248, 225, 225);
       color: #000;
       font-size: 18px;
       border-radius: 4px;
@@ -271,6 +268,16 @@ max-width: 60vw !important;
   font-style: initial !important;
   line-height: 1.42857143;
   color: #333;
+  .search {
+    form {
+      display: none !important;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+  }
+
   .post-title-main {
     margin-top: 0px !important;
     margin-bottom: 10px !important;
