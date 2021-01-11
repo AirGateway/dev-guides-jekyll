@@ -7,3 +7,8 @@ gem 'github-pages', group: :jekyll_plugins
 #gem "jekyll"
 
 gem 'jemoji'
+gem 'json'
+gem 'front_matter_parser'
+gem 'redcarpet'
+gem 'rake'
+

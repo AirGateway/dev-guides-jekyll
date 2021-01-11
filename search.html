@@ -1,42 +1,22 @@
 ---
+layout: default
 title: Search
-Searchsidebar: mydoc_sidebar
-permalink: search.html
-folder: /
 sitemap: false
-type: web
 ---
 
-<p>
-  <span id="search-process">Loading</span> results
-  <span id="search-query-container" style="display: none"
-    >for "<strong id="search-query"></strong>"</span
-  >
-</p>
-<ul id="search-results"></ul>
+<div class="search">
+<form action="" id="site_search">
+    <input style="font-size:20px;" type="text" id="search_box">
+    <input style="font-size:20px;" type="submit" value="Go!" id="go">
+</form>
 
-<script>
-  console.log(window)
-    window.data = {
-    	{% for item in site.pages %}
-    		{% if item.title %}
-    			{% unless item.excluded_in_search %}
-    				{% if added %},{% endif %}
-    				{% assign added = false %}
 
-    				"{{ item.url | slugify }}": {
-    					"id": "{{ item.url | slugify }}",
-    					"title": "{{ item.title | xml_escape }}",
-    					"category": "{{ collection.title | xml_escape }}",
-    					"url": " {{ item.url | xml_escape }}",
-    					"content": {{ item.content | strip_html | replace_regex: "[\s/\n]+"," " | strip | jsonify }}
-    				}
+<ul id="search_results">Loading results . . .</ul>
+</div>
 
-    				{% assign added = true %}
-    			{% endunless %}
-    		{% endif %}
-    	{% endfor %}
-    };
-</script>
-<script src="/js/lunr.min.js"></script>
-<script src="/js/search.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js" type="text/javascript"
+    charset="utf-8"></script>
+<script src="/node_modules/lunr/lunr.js" type="text/javascript" charset="utf-8"></script>
+<script src="{{ site.baseurl }}/js/search.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
+  

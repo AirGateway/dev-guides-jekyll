@@ -5,11 +5,8 @@ search: exclude
 
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-
-
-  {% for page in site.pages %}
-  {% unless page.search == "exclude" %}
+  {% for page in site.docs %}
+  {% unless docs.search == "exclude" %}
   <url>
     <loc>{{site.url}}{{ page.url}}</loc>
   </url>

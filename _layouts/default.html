@@ -1,55 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    {% include head.html %}
-
-    <script>
-      $(document).ready(function () {
-        // Initialize navgoco with default options
-        $("#mysidebar").navgoco({
-          caretHtml: "",
-          accordion: true,
-          openClass: "active", // open
-          save: false, // leave false or nav highlighting doesn't work right
-          cookie: {
-            name: "navgoco",
-            expires: false,
-            path: "/",
-          },
-          slide: {
-            duration: 400,
-            easing: "swing",
-          },
-        });
-
-        $("#collapseAll").click(function (e) {
-          e.preventDefault();
-          $("#mysidebar").navgoco("toggle", false);
-        });
-
-        $("#expandAll").click(function (e) {
-          e.preventDefault();
-          $("#mysidebar").navgoco("toggle", true);
-        });
-      });
-    </script>
-    <script>
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-      });
-    </script>
-    <script>
-      $(document).ready(function () {
-        $("#tg-sb-link").click(function () {
-          $("#tg-sb-sidebar").toggle();
-          $("#tg-sb-content").toggleClass("col-md-9");
-          $("#tg-sb-content").toggleClass("col-md-12");
-          $("#tg-sb-icon").toggleClass("fa-toggle-on");
-          $("#tg-sb-icon").toggleClass("fa-toggle-off");
-        });
-      });
-    </script>
-    {% if page.datatable == true %}
+    {% include head.html %} {% if page.datatable == true %}
     <!-- Include the standard DataTables bits -->
     <link
       rel="stylesheet"
@@ -97,19 +49,23 @@
               </a>
             </div>
 
-            <form action="{{ site.baseurl }}/search/" method="get">
-              <input
-                type="text"
-                name="q"
-                id="search-input"
-                placeholder="Search"
-                autofocus
-              />
 
-              <input type="submit" value="Search" style="display: none" />
-            </form>
+    <form class="site-search " action="{{ site.baseurl }}/search/" method="get">
+      <input type="text" name="q" id="search-input" placeholder="Search" autofocus class="site-search__input">
+      <span class=""></span>
+      <!-- <input class="prev" type="submit" value="Search!" class="site-search__button"> --->
+    
+    </form>
+    
+    <script>
+      var searchBox = document.querySelectorAll('.site-search input[type="text"] + span');
 
-            <!--  <img class="logo-sidebar" src="{{ site.baseurl }}/images/AirGateway-10.png"  > -->
+        searchBox.forEach((elm) => {
+          elm.addEventListener('click', () => {
+            elm.previousElementSibling.value = '';
+          });
+        });
+    </script>
 
             {% include sidebar.html %}
 
@@ -149,7 +105,7 @@
               id="togglemenu"
               class=""
               onclick="document.getElementById('tg-sb-sidebar').classList.toggle('hideSidebar');
-          document.getElementById('togglemenu').classList.toggle('visible');"
+              document.getElementById('togglemenu').classList.toggle('visible');"
             >
               <span><span></span><span></span><span></span></span
             ></a>

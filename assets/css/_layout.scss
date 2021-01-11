@@ -30,9 +30,20 @@ body {
     display: none !important;
   }
 
-  .test {
-    background-color: black;
+  .no-arrow {
+    span{
+          display: none;
+    }
   }
+
+  .search > *{
+margin: 0%;
+min-width: 60vw !important;
+max-width: 60vw !important;
+
+
+ }
+
 
   .logo-container {
     align-self: center;
@@ -56,7 +67,6 @@ body {
       .logo {
         width: 40px;
         grid-column-start: 1;
-        //animation: from-left 4s ease-in-out;
       }
 
       .logo-sidebar {
@@ -247,7 +257,7 @@ body {
       transform: scale(1) rotate(0deg);
 
       a {
-        color: #ffeb3b;
+        color: #fd9393;
       }
     }
   }

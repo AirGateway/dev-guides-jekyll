@@ -1,106 +1,190 @@
----
-layout: null
----
+jQuery(function () {
+  $.getJSON("/search_index.json", (data, err) => {
+    window.idx = data;
+  });
 
-(function () {
-	function getQueryVariable(variable) {
-		var query = window.location.search.substring(1),
-			vars = query.split("&");
+  $.getJSON("/corpus.json", (data, err) => {
+    window.documents = [];
+    Object.entries(data).forEach((key, value) => {
+      var doc = {
+        id: key[1].id,
+        content: key[1].content,
+        name: key[1].name,
+        url: key[1].url,
+      };
+      window.documents.push(doc);
+    });
+  });
 
-		for (var i = 0; i < vars.length; i++) {
-			var pair = vars[i].split("=");
+  function getQueryVariable(variable) {
+    var query = window.location.search.substring(1),
+      vars = query.split("&");
 
-			if (pair[0] === variable) {
-				return decodeURIComponent(pair[1].replace(/\+/g, '%20')).trim();
-			}
-		}
-	}
+    for (var i = 0; i < vars.length; i++) {
+      var pair = vars[i].split("=");
 
-	function getPreview(query, content, previewLength) {
-		previewLength = previewLength || (content.length * 2);
+      if (pair[0] === variable) {
+        return decodeURIComponent(pair[1].replace(/\+/g, "%20")).trim();
+      }
+    }
+  }
 
-		var parts = query.split(" "),
-			match = content.toLowerCase().indexOf(query.toLowerCase()),
-			matchLength = query.length,
-			preview;
+  var query = decodeURIComponent(
+    (getQueryVariable("q") || "").replace(/\+/g, "%20")
+  );
 
-		// Find a relevant location in content
-		for (var i = 0; i < parts.length; i++) {
-			if (match >= 0) {
-				break;
-			}
+  if (query) {
+    // console.log(query); // Get the value for the text field
+    document.getElementById("search_box").setAttribute("value", query);
+    // console.log(window);
+    setTimeout(function () {
+      if (window.idx) {
+        if (window.idx.fieldVectors) {
+          window.index = lunr.Index.load(window.idx);
+          var results = window.index.search(query); // Get lunr to perform a search
+          //     console.log(results);
+          display_search_results(results); // Hand the results off to be displayed
+        }
+      }
+    }, 500);
+  }
 
-			match = content.toLowerCase().indexOf(parts[i].toLowerCase());
-			matchLength = parts[i].length;
-		}
+  // Event when the form is submitted
+  $("#site_search").submit((event) => {
+    //  console.log(event);
+    event.preventDefault();
+    var query = $("#search_box").val(); // Get the value for the text field
+    window.index = lunr.Index.load(window.idx);
+    var results = window.index.search(query); // Get lunr to perform a search
 
-		// Create preview
-		if (match >= 0) {
-			var start = match - (previewLength / 2),
-				end = start > 0 ? match + matchLength + (previewLength / 2) : previewLength;
+    display_search_results(results); // Hand the results off to be displayed
+  });
 
-			preview = content.substring(start, end).trim();
+  var buildSearchResult = (doc) => {
+    var li = document.createElement("li"),
+      article = document.createElement("article"),
+      header = document.createElement("header"),
+      section = document.createElement("section"),
+      h2 = document.createElement("h2"),
+      a = document.createElement("a"),
+      p1 = document.createElement("p");
 
-			if (start > 0) {
-				preview = "..." + preview;
-			}
+    a.dataset.field = "url";
 
-			if (end < content.length) {
-				preview = preview + "...";
-			}
+    //a.href += "/pages/" + doc.url;
+    
+   
+    a.href = doc.url;
+    a.textContent = doc.name;
+ console.log(a);
+    p1.dataset.field = "content";
+    p1.textContent = doc.content;
+    p1.style.textOverflow = "ellipsis";
+    p1.style.overflow = "hidden";
+    p1.style.whiteSpace = "nowrap";
 
-			// Highlight query parts
-			preview = preview.replace(new RegExp("(" + parts.join("|") + ")", "gi"), "<strong>$1</strong>");
-		} else {
-			// Use start of content if no match found
-			preview = content.substring(0, previewLength).trim() + (content.length > previewLength ? "..." : "");
-		}
+    li.appendChild(article);
+    article.appendChild(header);
+    article.appendChild(section);
+    header.appendChild(h2);
+    h2.appendChild(a);
+    section.appendChild(p1);
 
-		return preview;
-	}
+    return li;
+  };
 
-	function displaySearchResults(results, query) {
-		var searchResultsEl = document.getElementById("search-results"),
-			searchProcessEl = document.getElementById("search-process");
+  function display_search_results(results) {
+    var search_results = $("#search_results");
+    if (results.length) {
+      search_results.empty(); // Clear any old results
+      results.forEach(function (result) {
+        var item = window.documents.filter((doc) => doc.id === result.ref);
+        // try to process the md
+        // var converter = new showdown.Converter();
+        // var html = converter.makeHtml(item[0].content);
+        // var parraf = $(html).find("p:first").text();
 
-		if (results.length) {
-			var resultsHTML = "";
-			results.forEach(function (result) {
-				var item = window.data[result.ref],
-					contentPreview = getPreview(query, item.content, 170),
-					titlePreview = getPreview(query, item.title);
+        // item[0].content = parraf;
 
-				resultsHTML += "<li><h4><a href='{{ site.baseurl }}" + item.url.trim() + "'>" + titlePreview + "</a></h4><p><small>" + contentPreview + "</small></p></li>";
-			});
+        var li = buildSearchResult(item[0]); // Build a snippet of HTML for this result
+        Object.keys(result.matchData.metadata).forEach(function (term) {
+          Object.keys(result.matchData.metadata[term]).forEach(function (
+            fieldName
+          ) {
+            var field = li.querySelector("[data-field=" + fieldName + "]"),
+              positions = result.matchData.metadata[term][fieldName].position;
+            wrapTerms(field, positions);
+          });
+        });
+        //  console.log(li);
+        search_results.append(li);
+      });
+    } else {
+      // If there are no results, let the user know.
+      search_results.html(
+        "<li>No results found.<br/>Please check spelling, spacing, yada...</li>"
+      );
+    }
+  }
 
-			searchResultsEl.innerHTML = resultsHTML;
-			searchProcessEl.innerText = "Showing";
-		} else {
-			searchResultsEl.style.display = "none";
-			searchProcessEl.innerText = "No";
-		}
-	}
+  function wrapTerms(element, matches) {
+    var nodeFilter = {
+      acceptNode: function (node) {
+        if (/^[\t\n\r ]*$/.test(node.nodeValue)) {
+          return NodeFilter.FILTER_SKIP;
+        }
+        return NodeFilter.FILTER_ACCEPT;
+      },
+    };
+    var index = 0,
+      matches = matches
+        .sort(function (a, b) {
+          return a[0] - b[0];
+        })
+        .slice(),
+      previousMatch = [-1, -1],
+      match = matches.shift(),
+      walker;
+    if (element instanceof Element) {
+      walker = document.createTreeWalker(
+        element,
+        NodeFilter.SHOW_TEXT,
+        nodeFilter,
+        false
+      );
+    } else {
+      return "not an element";
+    }
+    while ((node = walker.nextNode())) {
+      if (match == undefined) break;
+      if (match[0] == previousMatch[0]) continue;
 
-	window.index = lunr(function () {
-		this.field("id");
-		this.field("title", {boost: 10});
-		this.field("category");
-		this.field("url");
-		this.field("content");
-	});
+      var text = node.textContent,
+        nodeEndIndex = index + node.length;
 
-	var query = decodeURIComponent((getQueryVariable("q") || "").replace(/\+/g, "%20")),
-		searchQueryContainerEl = document.getElementById("search-query-container"),
-		searchQueryEl = document.getElementById("search-query"),
-		searchInputEl = document.getElementById("search-input");
+      if (match[0] < nodeEndIndex) {
+        var range = document.createRange(),
+          tag = document.createElement("mark"),
+          rangeStart = match[0] - index,
+          rangeEnd = rangeStart + match[1];
 
-	searchInputEl.value = query;
-	searchQueryEl.innerText = query;
-	searchQueryContainerEl.style.display = "inline";
+        tag.dataset.rangeStart = rangeStart;
+        tag.dataset.rangeEnd = rangeEnd;
 
-	for (var key in window.data) {
-		window.index.add(window.data[key]);
-	}
+        range.setStart(node, rangeStart);
+        range.setEnd(node, rangeEnd);
+        range.surroundContents(tag);
 
-	displaySearchResults(window.index.search(query), query); // Hand the results off to be displayed
-})();
+        index = match[0] + match[1];
+
+        // the next node will now actually be the text we just wrapped, so
+        // we need to skip it
+        walker.nextNode();
+        previousMatch = match;
+        match = matches.shift();
+      } else {
+        index = nodeEndIndex;
+      }
+    }
+  }
+});

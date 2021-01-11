@@ -19,17 +19,10 @@ entries:
             type: frontmatter
 
       - title: Getting Started
+        url: /getting_started.html
         output: web, pdf
+        type: homepage  
         folderitems:
-          - title: Getting Started
-            url: /getting_started.html
-            output: web, pdf
-            type: homepage
-
-          - title: Introduction
-            url: /introduction.html
-            output: web, pdf
-
           - title: Authentication
             url: /authentication.html
             output: web, pdf
@@ -43,21 +36,15 @@ entries:
             output: web, pdf
 
       - title: NDC API Docs
+        url: /NDC_API_Docs.html
         output: web, pdf
-        folderitems:
-          - title: NDC API Docs
-            url: /NDC_API_Docs.html
-            output: web, pdf
-            type: homepage      
+        type: homepage      
 
       - title: Hub API Docs
+        url: /Hub_API_Docs.html
         output: web, pdf
+        type: homepage
         folderitems:
-          - title: Hub API Docs
-            url: /Hub_API_Docs.html
-            output: web, pdf
-            type: homepage
-
           - title: Agents
             url: /agents.html
             output: web, pdf
@@ -75,17 +62,10 @@ entries:
             output: web, pdf   
 
       - title: Webhooks
+        url: /webhooks.html
         output: web, pdf
+        type: homepage
         folderitems:
-          - title: Webhooks
-            url: /webhooks.html
-            output: web, pdf
-            type: homepage
-
-          - title: Keys
-            url: /keys.html
-            output: web, pdf
-
           - title: Keys
             url: /keys.html
             output: web, pdf
@@ -95,11 +75,6 @@ entries:
         output: web, pdf
         type: homepage
         folderitems:
-          - title: Workflows
-            url: /workflows.html
-            output: web, pdf
-            type: homepage
-
           - title: Booking
             url: /booking.html
             output: web, pdf
@@ -109,9 +84,7 @@ entries:
             output: web, pdf
 
       - title: Providers
+        url: /providers.html
         output: web, pdf
-        folderitems:
-          - title: Providers
-            url: /providers.html
-            output: web, pdf
-            type: homepage
+        type: homepage
+        
