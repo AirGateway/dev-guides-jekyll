@@ -14,7 +14,7 @@ AirGateway NDC JSON API Developer Guide
 
 This is a developer guide intended to provide insights on a technical integration with AirGateway's **NDC JSON API** aggregation service.
 
-Our platform is designed to facilitate the interaction with the new distribution model brought by [NDC (New Distribution Capability)](http://www.iata.org/whatwedo/airline-distribution/ndc/) established by IATA and adopted by a growing number of the most relevant airlines in the World.
+Our platform is designed to facilitate the interaction with the new distribution model brought by [NDC (New Distribution Capability)](https://www.iata.org/en/programs/airline-distribution/ndc/) established by IATA and adopted by a growing number of the most relevant airlines in the World.
 
 Our **NDC Aggregation Platform** facilitates the interaction with multiple NDC providers in a one-to-one architecture. This makes much easier to interact with distributed airline NDC APIs and therefore facilitates transitioning into this model.
 
