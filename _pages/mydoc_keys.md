@@ -14,6 +14,6 @@ Each [Key](https://hub.airgateway.net/api/static/swagger-ui/#!/Agent_Keys/post_k
 - [Plan id](https://hub.airgateway.net/api/static/swagger-ui/#!/Plans/get_plans)
 - Agent id
 
-Once you have a token for an agent, you can start calling the JSON API using it impersonating your agents as it's explained [here](https://dev-guides.airgateway.net/getting_started/authentication/).
+Once you have a token for an agent, you can start calling the JSON API using it impersonating your agents as it's explained [here]({{  page.url | remove:'/keys.html' | split: '/'  }}/authentication.html).
 
 > All these steps can be done via our own hub application which you'll have access to

@@ -13,8 +13,8 @@ Using our NDC JSON API, you can book and issue tickets, and adding ancillaries t
 
 You can find our basic workflows here:
 
-- [Booking]({{  page.url | remove:'/workflows.html' | split: '/'  }}/booking.html/)
-- [Servicing]({{  page.url | remove:'/workflows.html' | split: '/'  }}/servicing.html/)
+- [Booking]({{  page.url | remove:'/workflows.html' | split: '/'  }}/booking.html)
+- [Servicing]({{  page.url | remove:'/workflows.html' | split: '/'  }}/servicing.html)
 
 ---
 
@@ -30,7 +30,7 @@ Anyway, below you have a little description on what these methods are used for.
 
 You can see [the docs](https://api.airgateway.net/v1.1/swagger-ui/#!/NDC_Methods/AirDocIssue_Post) and [an example](https://docs.airgateway.net/?version=latest#2e6c3925-7fc9-4675-a633-4e218762e98d) on how to use this method.
 
-This method receives a "search" with the flights info you want to search (origin, destination, dates...) and you'll receive a list of offers of each of the airlines you send the request to (you can indicate this via headers as [explained here](https://dev-guides.airgateway.net/getting_started/sending_requests_to_our_ndc_api/)).
+This method receives a "search" with the flights info you want to search (origin, destination, dates...) and you'll receive a list of offers of each of the airlines you send the request to (you can indicate this via headers as [explained here]({{  page.url | remove:'/workflows.html' | split: '/'  }}/sending_requests.html)).
 
 ---
 
