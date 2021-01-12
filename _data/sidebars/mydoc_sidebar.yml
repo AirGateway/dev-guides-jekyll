@@ -69,10 +69,7 @@ entries:
         url: /webhooks.html
         output: web, pdf
         type: homepage
-        folderitems:
-          - title: Keys
-            url: /keys.html
-            output: web, pdf
+  
 
       - title: Workflows
         url: /workflows.html
