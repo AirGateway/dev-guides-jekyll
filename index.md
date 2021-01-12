@@ -30,7 +30,7 @@ To use our **NDC JSON API** you must sign up in our agencies portal:
 
 We use a self-documented API Framework that produces always-up to date Swagger Documentation. This live-documentation can be found here.
 
-* [NDC JSON API reference v1.0](https://api.airgateway.net/v1/swagger-ui/)
+* N̶D̶C̶ ̶J̶S̶O̶N̶ ̶A̶P̶I̶ ̶r̶e̶f̶e̶r̶e̶n̶c̶e̶ ̶v̶1̶.̶0̶   ( Deprecated )
 * [NDC JSON API reference v1.1](https://api.airgateway.net/v1.1/swagger-ui/)
 
 You can find more examples of use in Postman:
@@ -39,4 +39,4 @@ You can find more examples of use in Postman:
 
 For futher questions/comments or just quickly getting in touch with our technical team you are welcome to use our Gitter Support Chat.
 
-* https://gitter.im/AirGateway/Lobby
+* [Gitter Support Chat](https://gitter.im/AirGateway/Lobby)
