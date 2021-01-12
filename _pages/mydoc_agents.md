@@ -16,7 +16,7 @@ Finally, each agency can have many agents working there. We use this entity you 
 - Agency id
 - Password
 
-If you ever want your users to login in our Bookingpad app directly, you'll have to share with them their username, agency name and password. You can check more information about [Bookingpad authentication in the open source project](https://github.com/AirGateway/bookingpad-app).
+If you ever want your users to login in our Bookingpad app directly, you'll have to share with them their username, agency name and password. You can check more information about [Bookingpad authentication in the open source project](https://github.com/AirGateway/bookingpad-web).
 
 > All these steps can be done via our own hub application which you'll have access to
 

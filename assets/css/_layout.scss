@@ -209,6 +209,7 @@ body {
     position: relative;
     max-width: 270px !important;
     min-width: 270px !important;
+    font-family: "Roboto-Bold";
 
     .icon-arrow-up {
       display: none !important;
@@ -229,13 +230,25 @@ body {
       list-style-type: none;
 
       li a {
-        font-weight: 400;
+        font-family: "Roboto-Light";
+        font-weight: 700;
         font-size: 16px;
         color: white;
         line-height: 5rem;
         padding: 2px 10px;
         padding-top: 1rem;
         background-color: unset !important;
+      }
+
+      .shortcuts-link {
+        transform: scale(1);
+        transform-origin: center;
+
+        &:hover {
+          text-decoration: none;
+          transform: scale(1.9) !important;
+          transition: all 0.9s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
       }
     }
   }
@@ -361,12 +374,12 @@ body {
   background-color: unset !important;
   border-top: 0.5px solid $color-primary-light;
   text-align: center;
-  font-size: 16x;
+  font-size: 16px !important;
 
   &:hover {
     text-decoration: none;
     transform: scale(1.1);
-    transition: all .9s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.9s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 }
 
@@ -380,7 +393,6 @@ body {
   padding: 2px 10px;
   padding-top: 1rem;
   background-color: unset !important;
-  
 }
 
 //      Ipad Styles Starts Here
@@ -475,6 +487,12 @@ body {
               padding: 2px 10px !important;
               padding-top: 5px !important;
               background-color: unset !important;
+
+              &:hover {
+                text-decoration: none;
+                transform: scale(1.1);
+                transition: all 0.9s cubic-bezier(0.165, 0.84, 0.44, 1);
+              }
             }
           }
         }
