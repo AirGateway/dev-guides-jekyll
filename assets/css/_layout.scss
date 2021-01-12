@@ -366,12 +366,12 @@ body {
   &:hover {
     text-decoration: none;
     transform: scale(1.1);
+    transition: all .9s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 }
 
 .nav li a {
   font-family: "Roboto-Bold";
-
   letter-spacing: 1px;
   font-size: 19px;
   font-weight: 700;
@@ -380,6 +380,7 @@ body {
   padding: 2px 10px;
   padding-top: 1rem;
   background-color: unset !important;
+  
 }
 
 //      Ipad Styles Starts Here
