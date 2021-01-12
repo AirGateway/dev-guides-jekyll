@@ -62,7 +62,8 @@ body {
       margin-right: auto;
       position: relative;
       .logo {
-        width: 40px;
+        margin-left: auto;
+        margin-right: auto;
         grid-column-start: 1;
       }
 
@@ -263,7 +264,7 @@ body {
 #tg-sb-content {
   grid-column-start: 2;
   padding: 6rem 12rem;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto_Bold", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-style: initial !important;
   line-height: 1.42857143;
@@ -354,15 +355,25 @@ body {
 }
 
 .nav ul li a {
+  font-family: "Roboto-Light";
+  font-weight: 700;
+  letter-spacing: 1px;
   background-color: unset !important;
   border-top: 0.5px solid $color-primary-light;
-  padding-left: 3rem !important;
-  font-weight: 100;
+  text-align: center;
   font-size: 16x;
+
+  &:hover {
+    text-decoration: none;
+    transform: scale(1.1);
+  }
 }
 
 .nav li a {
-  font-size: 16px;
+  font-family: "Roboto-Bold";
+
+  letter-spacing: 1px;
+  font-size: 19px;
   font-weight: 700;
   color: white;
   line-height: 5rem;
@@ -477,7 +488,7 @@ body {
       grid-column-start: 2;
       margin-left: 0;
       padding: 5%;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: "Roboto-Bold", Helvetica, Arial, sans-serif;
       font-size: 16px;
       font-style: initial !important;
       line-height: 1.42857143;

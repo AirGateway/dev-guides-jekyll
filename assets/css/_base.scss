@@ -3,9 +3,20 @@
     src: url(../fonts/TruenoExBd.otf) format("truetype");
 }
 
+
+@font-face {
+  font-family: 'Roboto-Light';
+    src: url(../fonts/Roboto-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+    src: url(../fonts/Roboto-Bold.ttf) format("truetype");
+}
+
 .logo {
   font-family: 'TruenoExBd', Fallback, sans-serif;
-  font-size: 45px;
+  font-size: 35px;
   line-height: 1.8;
   font-weight: bolder;  
   color: #fafafa;
