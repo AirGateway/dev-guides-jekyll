@@ -2,9 +2,9 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "base.scss";
-@import "layout.scss";
 @import "customstyles.css";
+@import "base.scss";
 @import "bootstrap.min.css";
 @import "theme-blue.css";
+@import "layout.scss";
 @import "typography.scss";
