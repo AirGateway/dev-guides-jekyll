@@ -13,6 +13,6 @@ You can use this API to manage Agencies, Agents, Consumers and Users in your org
 
 If you are interested in using this API, please contact us.
 
-- **V1.0** https://hub.airgateway.net/api/static/swagger-ui/#/
+* [V1.0](https://hub.airgateway.net/api/static/swagger-ui/#/)
 
 You can see a workflow example in this chapter
