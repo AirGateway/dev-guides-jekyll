@@ -84,8 +84,8 @@ entries:
             url: /servicing.html
             output: web, pdf
 
-      - title: Providers List
-        url: /providers_list.html
+      - title: Airlines/Providers
+        url: /airlines_providers.html
         output: web, pdf
         type: homepage
 
