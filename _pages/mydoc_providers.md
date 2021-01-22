@@ -1,32 +1,34 @@
 ---
-title: Providers List
+title: Airlines/Providers
 sidebar: mydoc_sidebar
-permalink: providers_list.html
+permalink: airlines_providers.html
 folder: pages
 ---
 
 This is a table of our Providers (Airlines) content displaying their capabilities supported through our aggregation platform.
 
-| NDC Airlines | Shopping & Booking | On-Hold & Issuing  |  Cancel & Refund   |   Pre-Sale Services    |           Post-Sale Services            | Changes |     FQTV Card      |                                Fare Types                                |           FoP            |
-| ------------ | :----------------: | :----------------: | :----------------: | :--------------------: | :-------------------------------------: | :-----: | :----------------: | :----------------------------------------------------------------------: | :----------------------: |
-| **BA**       | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: :fork_and_knife: | :date:  | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: |
-| **IB**       | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: |         :seat: :baggage_claim:          | :date:  | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: |
-| **LH**       | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: |         :seat: :baggage_claim:          | :date:  | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: |
-| **LX**       | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: |         :seat: :baggage_claim:          | :date:  | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: |
-| **OS**       | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: |         :seat: :baggage_claim:          | :date:  | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: |
-| **SN**       | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: |         :seat: :baggage_claim:          | :date:  | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: |
-| **AA**       | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: |         :seat: :baggage_claim:          | :date:  | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: |
-| **UA**       | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: |         :seat: :baggage_claim:          | :date:  | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: |
-| **A3**       | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: |         :seat: :baggage_claim:          | :date:  | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: |
-| **AF**       | :white_check_mark: | :white_check_mark: |        :x:         |           \-           |                 :seat:                  |   \-    |         \-         |                          :globe_with_meridians:                          |        :moneybag:        |
-| **KL**       | :white_check_mark: | :white_check_mark: |        :x:         |           \-           |                 :seat:                  |   \-    |         \-         |                          :globe_with_meridians:                          |        :moneybag:        |
-| **EK**       | :white_check_mark: | :white_check_mark: | :white_check_mark: |           \-           |         :seat: :baggage_claim:          |   \-    |         \-         |                          :globe_with_meridians:                          |        :moneybag:        |
-| **WS**       | :white_check_mark: | :white_check_mark: | :white_check_mark: |           \-           |                 :seat:                  |   \-    |         \-         |                          :globe_with_meridians:                          | :moneybag: :credit_card: |
-| **SQ**       | :white_check_mark: | :white_check_mark: | :white_check_mark: |           \-           |                 :seat:                  |   \-    |         \-         |                          :globe_with_meridians:                          | :moneybag: :credit_card: |
-| **AY**       | :white_check_mark: | :white_check_mark: | :white_check_mark: |           \-           |                 :seat:                  |   \-    |         \-         |                          :globe_with_meridians:                          | :moneybag: :credit_card: |
-| **VY**       | :white_check_mark: | :white_check_mark: | :white_check_mark: |           \-           |                 :seat:                  |   \-    |         \-         |                          :globe_with_meridians:                          | :moneybag: :credit_card: |
-| **QF**       |       :soon:       |       :soon:       |       :soon:       |         :soon:         |                 :soon:                  | :soon:  |       :soon:       |                                  :soon:                                  |          :soon:          |
-| **EY**       |       :soon:       |       :soon:       |       :soon:       |         :soon:         |                 :soon:                  | :soon:  |       :soon:       |                                  :soon:                                  |          :soon:          |
+| NDC Airlines  | Shopping & Booking | On-Hold & Issuing | Cancel & Refund | Pre-Sale Services | Post-Sale Services | Changes | FQTV Card | Fare Types | FoP | Status |
+| ------------- |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| **BA**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: :fork_and_knife: | :date: | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: | <span style="color:green">**Live**</span> |
+| **IB**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | :date: | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: | <span style="color:green">**Live**</span> |
+| **LH**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | :date: | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: | <span style="color:green">**Live**</span> | 
+| **LX**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | :date: | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: | <span style="color:green">**Live**</span> | 
+| **OS**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | :date: | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: | <span style="color:green">**Live**</span> | 
+| **SN**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | :date: | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: |  :moneybag: :credit_card: | <span style="color:green">**Live**</span> | 
+| **AA**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | :date: | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: |  :moneybag: :credit_card: | <span style="color:green">**Live**</span> | 
+| **UA**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | :date: | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: |  :moneybag: :credit_card: | <span style="color:green">**Live**</span> | 
+| **A3**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | :date: | :white_check_mark: | :globe_with_meridians: :closed_lock_with_key: :chart_with_upwards_trend: | :moneybag: :credit_card: | <span style="color:green">**Live**</span> | 
+| **SQ**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | \- | :seat: | \- | \- | :globe_with_meridians: | :moneybag: :credit_card: | <span style="color:green">**Live**</span> |
+| **AF**        | :white_check_mark: | :white_check_mark: | :x: | \- | :seat: | \- | \- | :globe_with_meridians: | :moneybag: |  <span style="color:orange">**Cert**</span> |
+| **KL**        | :white_check_mark: | :white_check_mark: | :x: | \- | :seat: | \- | \- | :globe_with_meridians: | :moneybag: |  <span style="color:orange">**Cert**</span> |
+| **WS**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | \- | :seat: | \- | \- | :globe_with_meridians: | :moneybag: :credit_card: | <span style="color:red">**Hold**</span> |
+| **EK**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | \- | :seat: :baggage_claim: | \- | \- | :globe_with_meridians: | :moneybag: |  <span style="color:orange">**Cert**</span> |
+| **QF**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | \- | :seat: :baggage_claim: | \- | \- | :globe_with_meridians: | :moneybag: |  <span style="color:orange">**Cert**</span> |
+| **EY**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | \- | :seat: :baggage_claim: | \- | \- | :globe_with_meridians: | :moneybag: |  <span style="color:orange">**Cert**</span> |
+| **QR**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | \- | :seat: :baggage_claim: | \- | \- | :globe_with_meridians: | :moneybag: |  Implem. |
+| **AY**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | \- | :seat: | \- | \- | :globe_with_meridians: | :moneybag: :credit_card: | Implem. |
+| **VY**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | \- | :seat: | \- | \- | :globe_with_meridians: | :credit_card: | <span style="color:orange">**Cert**</span> |
+| **EI**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | \- | :seat: | \- | \- | :globe_with_meridians: | :credit_card: | Implem. |
 
 ---
 
