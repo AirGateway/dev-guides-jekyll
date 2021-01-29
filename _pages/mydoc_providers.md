@@ -32,6 +32,8 @@ This is a table of our Providers (Airlines) content displaying their capabilitie
 | **AY**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | \- | \- | :globe_with_meridians: | :moneybag: :credit_card: | Implem. |
 | **EI**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | \- | \- | :globe_with_meridians: | :credit_card: | Implem. |
 | **BR**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | :seat: :baggage_claim: | \- | \- | :globe_with_meridians: | :credit_card: | Implem. |
+| **WY**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | \- | \- | \- | :globe_with_meridians: | :credit_card: | Implem. |
+| **SV**        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :seat: :baggage_claim: | \- | \- | \- | :globe_with_meridians: | :credit_card: | Implem. |
 
 ---
 
