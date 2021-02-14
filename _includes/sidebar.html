@@ -1,137 +1,95 @@
+
 {% assign sidebar = site.data.sidebars[page.sidebar].entries %}
 
 <ul id="mysidebar" class="nav">
 
-  {% for entry in sidebar %}
-  {% for folder in entry.folders %}
-  {% if folder.output contains "web" %}
+    {% for entry in sidebar %}
+    {% for folder in entry.folders %}
+    {% if folder.output contains "web" %}
 
-  <script>
-      $(document).ready(function () {
-        // Initialize navgoco with default options
-        $("#mysidebar").navgoco({
-          caretHtml: "",
-          accordion: true,
-          openClass: "active", // open
-          save: false, // leave false or nav highlighting doesn't work right
-          cookie: {
-            name: "navgoco",
-            expires: false,
-            path: "/",
-          },
-          slide: {
-            duration: 400,
-            easing: "swing",
-          },
-        });
-
-        $("#collapseAll").click(function (e) {
-          e.preventDefault();
-          $("#mysidebar").navgoco("toggle", false);
-        });
-
-        $("#expandAll").click(function (e) {
-          e.preventDefault();
-          $("#mysidebar").navgoco("toggle", true);
-        });
-      });
-    </script>
     <script>
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-      });
-    </script>
-    <script>
-      $(document).ready(function () {
-        $("#tg-sb-link").click(function () {
-          $("#tg-sb-sidebar").toggle();
-          $("#tg-sb-content").toggleClass("col-md-9");
-          $("#tg-sb-content").toggleClass("col-md-12");
-          $("#tg-sb-icon").toggleClass("fa-toggle-on");
-          $("#tg-sb-icon").toggleClass("fa-toggle-off");
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
         });
-      });
     </script>
 
-  <li>
-     <!-- <a title="{{folder.title}}"  href="#">{{folder.title}}</a>
+    <li>
+        <!-- <a title="{{folder.title}}"  href="#">{{folder.title}}</a>
 
-     id="sidebar-link" onclick="document.getElementById('tg-sb-sidebar').classList.toggle('hideSidebar');
-       " href="{{folderitem.url | remove: "/"}}"
-      -->
-
-         {% if folder.folderitems %}
-            <a title="{{folder.title}}"      
-               id="sidebar-link"
-               onclick="document.getElementById('tg-sb-sidebar').classList.toggle('hideSidebar');"
-               href="{{folder.url | remove: "/"}}">
-                    {{folder.title}}
-            </a>
-         {% else %}
-            <a title="{{folder.title}}"      
-               id="sidebar-link"
-               class="no-arrow"
-               onclick="document.getElementById('tg-sb-sidebar').classList.toggle('hideSidebar');"
-               href="{{folder.url | remove: "/"}}">
-                    {{folder.title}}
-            </a>
-         {% endif %}
-
-      <ul>
-          {% for folderitem in folder.folderitems %}
-          {% if folderitem.output contains "web" %}
-          {% if folderitem.external_url %}
-
-          <li><a title="{{folderitem.title}}" id="sidebar-link" onclick="document.getElementById('tg-sb-sidebar').classList.toggle('hideSidebar');
-         " href="{{folderitem.external_url}}" target="_blank" rel="noopener">{{folderitem.title}}</a></li>
-          {% elsif page.url == folderitem.url %}
-          <li class="active"><a title="{{folderitem.title}}" id="sidebar-link" onclick="document.getElementById('tg-sb-sidebar').classList.toggle('hideSidebar');
-         " href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li>
-          {% elsif folderitem.type == "empty" %}
-          <li><a title="{{folderitem.title}}" id="sidebar-link" onclick="document.getElementById('tg-sb-sidebar').classList.toggle('hideSidebar');
-         " href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li>
-          {% else %}
-          <li><a title="{{folderitem.title}}" id="sidebar-link" onclick="document.getElementById('tg-sb-sidebar').classList.toggle('hideSidebar');
-         " href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li>
-
-          {% endif %}
-          {% for subfolders in folderitem.subfolders %}
-          {% if subfolders.output contains "web" %}
-          <li class="subfolders">
-              <a title="{{subfolders.title}}" href="#">{{ subfolders.title }}</a>
-              <ul>
-                  {% for subfolderitem in subfolders.subfolderitems %}
-                  {% if subfolderitem.output contains "web" %}
-                  {% if subfolderitem.external_url %}
-                  <li><a title="{{subfolderitem.title}}" href="{{subfolderitem.external_url}}" target="_blank" rel="noopener">{{subfolderitem.title}}</a></li>
-                  {% elsif page.url == subfolderitem.url %}
-                  <li class="active"><a title="{{subfolderitem.title}}" href="{{subfolderitem.url | remove: "/"}}">{{subfolderitem.title}}</a></li>
-                  {% else %}
-                  <li><a title="{{subfolderitem.title}}"  href="{{subfolderitem.url | remove: "/"}}">{{subfolderitem.title}}</a></li>
-                  {% endif %}
-                  {% endif %}
-                  {% endfor %}
-              </ul>
-          </li>                    
-          {% endif %}
-          {% endfor %}
-          {% endif %}
-          {% endfor %}
-      </ul>
-   </li>
-     {% endif %}
-      {% endfor %}
-      {% endfor %}
-      <!-- if you aren't using the accordion, uncomment this block:
-         <p class="external">
-             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
-         </p>
+        id="sidebar-link" onclick="document.getElementById('tg-sb-sidebar').classList.toggle('hideSidebar');
+          " href="{{folderitem.url | remove: "/"}}"
          -->
+
+        {% if folder.folderitems %}
+        <a title="{{folder.title}}"
+           id="sidebar-link"
+           href="{{folder.url | remove: "/"}}">
+        {{folder.title}}
+        </a>
+        {% else %}
+        <a title="{{folder.title}}"
+           id="sidebar-link"
+           class="no-arrow"
+           href="{{folder.url | remove: "/"}}">
+        {{folder.title}}
+        </a>
+        {% endif %}
+
+        <ul>
+            {% for folderitem in folder.folderitems %}
+            {% if folderitem.output contains "web" %}
+            {% if folderitem.external_url %}
+
+            <li><a title="{{folderitem.title}}" id="sidebar-link"
+         " href="{{folderitem.external_url}}" target="_blank" rel="noopener">{{folderitem.title}}</a></li>
+            {% elsif page.url == folderitem.url %}
+            <li class="active"><a title="{{folderitem.title}}" id="sidebar-link"
+         " href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li>
+            {% elsif folderitem.type == "empty" %}
+            <li><a title="{{folderitem.title}}" id="sidebar-link"
+         " href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li>
+            {% else %}
+            <li><a title="{{folderitem.title}}" id="sidebar-link"
+         " href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li>
+
+            {% endif %}
+            {% for subfolders in folderitem.subfolders %}
+            {% if subfolders.output contains "web" %}
+            <li class="subfolders">
+                <a title="{{subfolders.title}}" href="#">{{ subfolders.title }}</a>
+                <ul>
+                    {% for subfolderitem in subfolders.subfolderitems %}
+                    {% if subfolderitem.output contains "web" %}
+                    {% if subfolderitem.external_url %}
+                    <li><a title="{{subfolderitem.title}}" href="{{subfolderitem.external_url}}" target="_blank" rel="noopener">{{subfolderitem.title}}</a></li>
+                    {% elsif page.url == subfolderitem.url %}
+                    <li class="active"><a title="{{subfolderitem.title}}" href="{{subfolderitem.url | remove: "/"}}">{{subfolderitem.title}}</a></li>
+                    {% else %}
+                    <li><a title="{{subfolderitem.title}}"  href="{{subfolderitem.url | remove: "/"}}">{{subfolderitem.title}}</a></li>
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </li>
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+    <!-- if you aren't using the accordion, uncomment this block:
+       <p class="external">
+           <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+       </p>
+       -->
 </ul>
 
-<!-- this highlights the active parent class in the navgoco sidebar. this is critical 
-so that the parent expands when you're viewing a page. This must appear below the 
-sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before 
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical
+so that the parent expands when you're viewing a page. This must appear below the
+sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before
 the sidebar code runs and the class never gets inserted.-->
 
 <script>$("li.active").parents('li').toggleClass("active");</script>
