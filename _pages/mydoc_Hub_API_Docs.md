@@ -1,11 +1,11 @@
 ---
-title: HUB API Docs
+title: Partners API Docs
 sidebar: mydoc_sidebar
 permalink: Hub_API_Docs.html
 folder: pages
 ---
 
-# HUB API Docs
+# Partners API Docs
 
 We offer an API for provisioning credentials so you can easily create new consumers, agencies and agents in our systems.
 

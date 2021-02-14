@@ -5,22 +5,28 @@ permalink: agents.html
 folder: pages
 ---
 
-Finally, each agency can have many agents working there. We use this entity you trace the whole selling process to every user involved. When a user logs into your system, you'll have to send his/her key (token) credential so we can know who's performing the action and what consumer he/she belongs to (check Authentication in Gettin Started chapter).
+Finally, each agency can have many agents working there. We use this entity you trace the whole selling process to every user involved. When a user logs into your system, you'll have to send his/her key (token) credential so we can know who's performing the action and what consumer he/she belongs to (check Authentication in NDC JSON API chapter).
 
 ---
 
-[Agents](https://hub.airgateway.net/api/static/swagger-ui/#!/Agents/post_agents) have some specific information about the user, but these are the most relevant:
+[Agents](https://hub.airgateway.net/api/static/swagger-ui/#/Agents) have some specific information about the user, but these are the most relevant:
 
 - Username
 - Email
 - Agency id
 - Password
 
-If you ever want your users to login in our Bookingpad app directly, you'll have to share with them their username, agency name and password. You can check more information about [Bookingpad authentication in the open source project](https://github.com/AirGateway/bookingpad-web).
+If you ever want your users to login in our Bookingpad app directly, you'll have to share with them their username, agency name and password.
 
-> All these steps can be done via our own hub application which you'll have access to
+> All these steps can be done via our own hub application if you prefer, you can request access to this tool if needed.
 
-## Authenticating agents
+## Impersonating agents
+
+Once you have created an Agent, you can call the [Issue Token method](https://hub.airgateway.net/api/static/swagger-ui/#/Agents/post_partner_agents__agentID__issue_token) to get an [NDC JSON API](/NDC_API_Docs.html) Token.
+
+With that token, you can start calling the NDC JSON API and everything will be logged to that Agent.
+
+## Authenticating agents in BookingPad
 
 In our bookingpad tool, agents can login using their username, agency and password. But sometimes, your needs include your users login only on your own app (which uses our JSON API) and you want them to use bookingpad only for something that your own app doesn't support (check https://dev-guides.airgateway.net/hub_api_docs to know how to create agents in your organization, you'll need to store all the agents information in your app). You can use our own bookingpad or a different instance you have in your servers, in this case we'll use our own bookingpad instance domain.
 You can achieve this by using following process:

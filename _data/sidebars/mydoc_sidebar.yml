@@ -26,6 +26,11 @@ entries:
         url: /getting_started.html
         output: web, pdf
         type: homepage  
+
+      - title: NDC JSON API Docs
+        url: /NDC_API_Docs.html
+        output: web, pdf
+        type: homepage
         folderitems:
           - title: Authentication
             url: /authentication.html
@@ -38,51 +43,36 @@ entries:
           - title: Sending Requests
             url: /sending_requests.html
             output: web, pdf
+          
+          - title: Workflows
+            url: /workflows.html
+            output: web, pdf
 
-      - title: NDC API Docs
-        url: /NDC_API_Docs.html
-        output: web, pdf
-        type: homepage      
+          - title: Booking Workflows
+            url: /booking.html
+            output: web, pdf
 
-      - title: Hub API Docs
+          - title: Servicing Workflows
+            url: /servicing.html
+            output: web, pdf
+
+      - title: Partners API Docs
         url: /Hub_API_Docs.html
         output: web, pdf
         type: homepage
         folderitems:
-          - title: Agents
-            url: /agents.html
-            output: web, pdf
-
           - title: Agencies
             url: /agencies.html
             output: web, pdf
-
-          - title: Consumers
-            url: /consumers.html
+            
+          - title: Agents
+            url: /agents.html
             output: web, pdf
-
-          - title: Keys
-            url: /keys.html
-            output: web, pdf   
 
       - title: Webhooks
         url: /webhooks.html
         output: web, pdf
         type: homepage
-  
-
-      - title: Workflows
-        url: /workflows.html
-        output: web, pdf
-        type: homepage
-        folderitems:
-          - title: Booking
-            url: /booking.html
-            output: web, pdf
-
-          - title: Servicing
-            url: /servicing.html
-            output: web, pdf
 
       - title: Airlines/Providers
         url: /airlines_providers.html

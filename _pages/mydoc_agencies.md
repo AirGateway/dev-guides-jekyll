@@ -5,10 +5,8 @@ permalink: agencies.html
 folder: pages
 ---
 
-Each consumer will have at least one agency, but sometimes they have many different agencies (different offices around the same country for example).
+As a partner, you'll be able to create new agencies associated to your consumer or other existing agencies can give you access to create agents and impersonate them.
 
 ---
 
-[Agencies](https://hub.airgateway.net/api/static/swagger-ui/#!/Agencies/post_agencies) are really simple entities which will only have a name and a reference to the consumer they belong.
-
-> All these steps can be done via our own hub application which you'll have access to
+[Agencies](https://hub.airgateway.net/api/static/swagger-ui/#/Agencies) are simple entities which will have one or many agents inside.

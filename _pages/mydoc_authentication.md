@@ -11,7 +11,7 @@ After registration, you would be able to apply for an Authentication key. We wil
 
 ---
 
-All requests sent to the **NDC JSON API ** require to be authenticated with an HTTP header like this:
+All requests sent to the **NDC JSON API** require to be authenticated with an HTTP header like this:
 
 - **Authorization**: {Authorization-key}
 
