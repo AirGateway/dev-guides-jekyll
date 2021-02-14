@@ -86,10 +86,7 @@ body {
     align-self: end;
     grid-row-start: 2;
     transform: scale(1) rotate(0deg);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15%;
-    margin-bottom: 5%;
+    margin: 5rem auto 2rem auto;
     padding: 0px;
 
     #search-input {
@@ -150,6 +147,10 @@ body {
     max-width: 270px !important;
     min-width: 270px !important;
     grid-row-start: 3;
+    max-height: calc(100vh - 340px);
+    overflow-y: scroll;
+    background: #9a0106;
+    border-radius: 7px;
 
     .sidebarTitle {
       border: unset;
@@ -164,8 +165,17 @@ body {
     }
 
     li {
+      padding-bottom: 13px;
+      a {
+        font-weight: 300;
+        padding-top: 2px;
+      }
       ul {
-        padding-bottom: 3rem;
+        margin-top: -12px;
+        padding-left: 0px;
+        li {
+          padding-bottom: 0px;
+        }
       }
     }
 
@@ -203,7 +213,7 @@ body {
   #shortcuts {
     align-self: end;
     display: block;
-    height: 200px;
+    height: 110px;
     grid-row-start: 4;
     margin-top: 0%;
     margin-left: auto;
@@ -229,14 +239,17 @@ body {
 
     ul {
       list-style-type: none;
+      padding-left: 20px;
 
+      li {
+        height: 3rem;
+      }
       li a {
-        font-weight: 700;
+        font-weight: 400;
         font-size: 16px;
         color: white;
-        line-height: 5rem;
+        line-height: 3rem;
         padding: 2px 10px;
-        padding-top: 1rem;
         background-color: unset !important;
       }
 
@@ -262,7 +275,7 @@ body {
       color: white;
       width: fit-content;
       margin: auto;
-      margin-bottom: 20px;
+      margin-bottom: 5px;
       font-size: 16px;
       font-weight: 700;
       transform: scale(1) rotate(0deg);
@@ -373,7 +386,6 @@ body {
 }
 
 .nav > li {
-  margin: 1rem 0;
   border-bottom: 0.0001px solid #ffffff3b;
 }
 
@@ -432,6 +444,14 @@ body {
 
 //      Mobile Styles Starts Here
 @media (max-width: 1200px) and (min-width: 300px) {
+
+  #footer {
+    p {
+      margin-bottom: 15px;
+    }
+  }
+
+
   .hideSidebar {
     transform: translateX(100vw) !important  ;
     z-index: 1;
@@ -471,9 +491,17 @@ body {
       transform: translateX(0vw);
       padding-top: 5%;
       z-index: 4;
+      #mysidebar {
+        li {
+          padding-top: 6px;
+          ul {
+            margin-top: -5px;
+          }
+        }
+      }
 
       .nav li a {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 700;
         color: white;
         line-height: 30px;
