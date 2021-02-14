@@ -26,6 +26,14 @@ entries:
             output: web, pdf
             type: homepage
 
+      - title: NDC JSON API Docs
+        output: web, pdf
+        folderitems:
+          - title: NDC JSON API Docs
+            url: /NDC_API_Docs.html
+            output: web, pdf
+            type: homepage
+            
           - title: Authentication
             url: /authentication.html
             output: web, pdf
@@ -38,18 +46,10 @@ entries:
             url: /sending_requests.html
             output: web, pdf
 
-      - title: NDC API Docs
+      - title: Partners API Docs
         output: web, pdf
         folderitems:
-          - title: NDC API Docs
-            url: /NDC_API_Docs.html
-            output: web, pdf
-            type: homepage      
-
-      - title: Hub API Docs
-        output: web, pdf
-        folderitems:
-          - title: Hub API Docs
+          - title: Partners API Docs
             url: /Hub_API_Docs.html
             output: web, pdf
             type: homepage

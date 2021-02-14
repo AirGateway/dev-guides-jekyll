@@ -1,5 +1,5 @@
 ---
-title: Booking
+title: Booking Workflows
 sidebar: mydoc_sidebar
 permalink: booking.html
 folder: pages
