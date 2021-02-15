@@ -87,6 +87,7 @@ body {
     grid-row-start: 2;
     transform: scale(1) rotate(0deg);
     margin: 5rem auto 2rem auto;
+    margin-top: 0px;
     padding: 0px;
 
     #search-input {
@@ -124,14 +125,14 @@ body {
   grid-column-start: 1;
   grid-template-rows: 40px auto auto auto auto;
   color: #fff;
-  display: grid;
+  display: flex;
+  flex-flow: column;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
   padding-right: unset;
   padding-left: unset;
   padding-top: 15px;
-  position: fixed;
   min-height: 100vh;
   max-width: 300px;
   min-width: 300px;
@@ -140,12 +141,10 @@ body {
   background-position: 0% 100%;
 
   #sidebar-container {
-    max-height: calc(100vh - 230px);
     max-width: 270px !important;
     min-width: 270px !important;
     margin-left: auto;
     margin-right: auto;
-    position: relative;
     border-radius: 7px;
     overflow-y: scroll;
     -ms-overflow-style: none;
