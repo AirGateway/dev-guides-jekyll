@@ -514,58 +514,66 @@ body {
       transform: translateX(0vw);
       padding-top: 5%;
       z-index: 4;
-      #mysidebar {
-        li {
-          padding-top: 6px;
-          ul {
-            margin-top: -5px;
+      position: fixed;
+
+      #sidebar-container {
+        max-height: calc(100vh - 230px);
+        position: relative;
+        #mysidebar {
+          li {
+            padding-top: 6px;
+
+            ul {
+              margin-top: -5px;
+            }
           }
         }
-      }
 
-      .nav li a {
-        font-size: 16px;
-        font-weight: 700;
-        color: white;
-        line-height: 30px;
-        padding: 1px 9px;
-        padding-top: 1px;
-        background-color: unset !important;
-      }
-
-      #shortcuts {
-        height: 125px !important;
-        .shortcuts_links {
-          font-size: 14px !important;
-          font-weight: 700 !important;
-          color: white !important;
-          margin: 0 !important;
-          padding: 1px 10px !important;
+        .nav li a {
+          font-size: 16px;
+          font-weight: 700;
+          color: white;
+          line-height: 30px;
+          padding: 1px 9px;
+          padding-top: 1px;
+          background-color: unset !important;
         }
 
-        ul {
-          li {
-            a {
-              font-weight: 400 !important;
-              font-size: 14px !important;
-              color: white !important;
-              line-height: 30px !important;
-              padding: 2px 10px !important;
-              padding-top: 5px !important;
-              background-color: unset !important;
+        #shortcuts {
+          height: 125px !important;
 
-              &:hover {
-                text-decoration: none;
-                transform: scale(1.1);
-                transition: all 0.9s cubic-bezier(0.165, 0.84, 0.44, 1);
+          .shortcuts_links {
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            color: white !important;
+            margin: 0 !important;
+            padding: 1px 10px !important;
+          }
+
+          ul {
+            li {
+              a {
+                font-weight: 400 !important;
+                font-size: 14px !important;
+                color: white !important;
+                line-height: 30px !important;
+                padding: 2px 10px !important;
+                padding-top: 5px !important;
+                background-color: unset !important;
+
+                &:hover {
+                  text-decoration: none;
+                  transform: scale(1.1);
+                  transition: all 0.9s cubic-bezier(0.165, 0.84, 0.44, 1);
+                }
               }
             }
           }
         }
-      }
 
-      #footer p {
-        font-size: 12px;
+        #footer p {
+          font-size: 12px;
+        }
       }
     }
 
